@@ -1,0 +1,119 @@
+/**
+ * Estadistica.
+ *  obtiene el promedio y la desviacion de 10 numeros dados por el usuario
+ * @Author Juan Daniel Quispe Ramos
+ * @version 1.0 26/08/2025
+ */
+
+public class Estadistica {
+        //atributos
+    private float a,b,c,d,e,f,g,h,i,j;
+        //constructor con argumentos
+    public Estadistica(
+        float a,float b,float c,float d,float e,float f,
+        float g,float h,float i,float j){
+            this.a=a;this.b=b;this.c=c;this.d=d;this.e=e;this.f=f;
+            this.g=g;this.h=h;this.i=i;this.j=j;
+        }
+        //obtiene el promedio
+    public float Promedio(){
+        float pro=0;
+        pro=(a+b+c+d+e+f+g+h+i+j)/10;
+        return pro;
+    }
+        //obtiene la desviacion
+    public float Desviacion(){
+        float des=0;
+        float aux=0;
+        aux=(float)((Math.pow(a - Promedio(), 2))/9)
+                +(float)((Math.pow(b - Promedio(), 2))/9)
+                +(float)((Math.pow(c - Promedio(), 2))/9)
+                +(float)((Math.pow(d - Promedio(), 2))/9)
+                +(float)((Math.pow(e - Promedio(), 2))/9)
+                +(float)((Math.pow(f - Promedio(), 2))/9)
+                +(float)((Math.pow(g - Promedio(), 2))/9)
+                +(float)((Math.pow(h - Promedio(), 2))/9)
+                +(float)((Math.pow(i - Promedio(), 2))/9)
+                +(float)((Math.pow(j - Promedio(), 2))/9);
+        des=(float)Math.sqrt(aux);
+        return des;
+    }
+}
+
+//PROGRAMA PRINCIPAL (MAIN)
+public static void main(String[] args) {
+        System.out.println("Ingrese 10 numeros: ");
+            //guarda los valores ingresados por el usuario
+        Scanner sc=new Scanner(System.in);
+        float a=sc.nextFloat();float b=sc.nextFloat();
+        float c=sc.nextFloat();float d=sc.nextFloat();
+        float e=sc.nextFloat();float f=sc.nextFloat();
+        float g=sc.nextFloat();float h=sc.nextFloat();
+        float i=sc.nextFloat();float j=sc.nextFloat();
+            //crea un objeto
+        Estadistica S1=new Estadistica(a,b,c,d,e,f,g,h,i,j);
+        System.out.println("El promedio: "+S1.Promedio());
+        System.out.println("La desviacion: "+S1.Desviacion());
+    }
+
+
+  //POO...............
+
+/**
+ * Estadistica.
+ *  obtiene el promedio y la desviacion de 10 numeros dados por el usuario
+ * @Author Juan Daniel Quispe Ramos
+ * @version 1.0 26/08/2025
+ */
+
+public class Estadistica {
+        //define 10 atributos tipo float
+    private float a,b,c,d,e,f,g,h,i,j;
+        //Constructor con 10 argumentos tipo float
+    public Estadistica(
+        float a,float b,float c,float d,float e,float f,
+        float g,float h,float i,float j){
+            this.a=a;this.b=b;this.c=c;this.d=d;this.e=e;this.f=f;
+            this.g=g;this.h=h;this.i=i;this.j=j;
+        }
+        //retorna el promedio de los 10 datos float
+    public float Promedio(){
+        float pro=0;
+        pro=(a+b+c+d+e+f+g+h+i+j)/10;
+        return pro;
+    }
+        //retorna la desviacion de los 10 datos float
+    public float Desviacion(){
+        float des=0;
+        float aux=0;
+        aux=(float)((Math.pow(a - Promedio(), 2))/9)
+                +(float)((Math.pow(b - Promedio(), 2))/9)
+                +(float)((Math.pow(c - Promedio(), 2))/9)
+                +(float)((Math.pow(d - Promedio(), 2))/9)
+                +(float)((Math.pow(e - Promedio(), 2))/9)
+                +(float)((Math.pow(f - Promedio(), 2))/9)
+                +(float)((Math.pow(g - Promedio(), 2))/9)
+                +(float)((Math.pow(h - Promedio(), 2))/9)
+                +(float)((Math.pow(i - Promedio(), 2))/9)
+                +(float)((Math.pow(j - Promedio(), 2))/9);
+        des=(float)Math.sqrt(aux);
+        return des;
+    }
+}
+
+//PROGRAMA PRINCIPAL (MAIN)
+public static void main(String[] args) {
+        System.out.println("Ingrese 10 numeros: ");
+            //guarda 10 valores tipo float ingresados por el usuario
+        Scanner sc=new Scanner(System.in);
+        float a=sc.nextFloat();float b=sc.nextFloat();
+        float c=sc.nextFloat();float d=sc.nextFloat();
+        float e=sc.nextFloat();float f=sc.nextFloat();
+        float g=sc.nextFloat();float h=sc.nextFloat();
+        float i=sc.nextFloat();float j=sc.nextFloat();
+            //instancia un objeto Estadistica para utilizarse
+        Estadistica S1=new Estadistica(a,b,c,d,e,f,g,h,i,j);
+            //muestra el resultado del promedio y la desviacion
+        System.out.println("El promedio: "+S1.Promedio());
+        System.out.println("La desviacion: "+S1.Desviacion());
+    }
