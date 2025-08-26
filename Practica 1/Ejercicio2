@@ -1,1 +1,105 @@
+/**
+ * Ecuacion Cuadratica.
+ *  muestra el resultado de las raices si estas existen
+ * @Author Juan Daniel Quispe Ramos
+ * @version 1.0 26/08/2025
+ */
 
+public class EcuacionLineal {
+    //atributos
+    private double a,b,c;
+    //constructor
+    public EcuacionLineal(double a,double b,double c){
+        this.a=a;this.b=b;this.c=c;
+    }
+    //obtiene el discriminante
+    public double getDiscriminante(){
+        double dis=0;
+        dis=(b*b)-4*a*c;
+        return dis;
+    }
+    //obtiene la primera raiz
+    public double getRaiz1(){
+        double r1=0;
+        r1=(-b+Math.sqrt(b*b-4*a*c))/2*a;
+        return r1;
+    }
+    //obtiene la segunda raiz
+    public double getRaiz2(){
+        double r2=0;
+        r2=(-b-Math.sqrt(b*b-4*a*c))/2*a;
+        return r2;
+    }
+}
+
+//METODO PRINCIPAL (MAIN)
+public static void main(String[] args) {
+        System.out.println("Ingrese a,b,c: ");
+          //guarda los datos ingresados
+        Scanner sc=new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+          //crea un objeto
+        EcuacionLineal e1=new EcuacionLineal(a,b,c);
+        System.out.println("Discriminante>> "+e1.getDiscriminante());
+        if(e1.getDiscriminante()==0){
+            System.out.println("Raiz 1> "+e1.getRaiz1());
+        }else{
+            if(e1.getDiscriminante()>0){
+                System.out.println("Raiz 1> "+e1.getRaiz1()+"... Raiz 2> "+e1.getRaiz2());
+            }else{
+                System.out.println("La ecuacion no tiene raices reales!");
+}
+
+        //POO............
+
+public class EcuacionLineal {
+      //Define 3 atributos double
+    private double a,b,c;
+      //Metodo Costructor con argumentos double
+    public EcuacionLineal(double a,double b,double c){
+        this.a=a;this.b=b;this.c=c;
+    }
+      //retorna el discriminante de la ecuacion
+    public double getDiscriminante(){
+        double dis=0;
+        dis=(b*b)-4*a*c;
+        return dis;
+    }
+      //retorna la primera raiz de la ecuacion
+    public double getRaiz1(){
+        double r1=0;
+        r1=(-b+Math.sqrt(b*b-4*a*c))/2*a;
+        return r1;
+    }
+      //retorna la segunda raiz de la ecuacion
+    public double getRaiz2(){
+        double r2=0;
+        r2=(-b-Math.sqrt(b*b-4*a*c))/2*a;
+        return r2;
+    }
+}
+
+    
+//METODO PRINCIPAL (MAIN)
+public static void main(String[] args) {
+        System.out.println("Ingrese a,b,c: ");
+          //guarda los datos double ingresados por el usuario
+        Scanner sc=new Scanner(System.in);
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+          //Instancia un objeto EcuacionLineal
+        EcuacionLineal e1=new EcuacionLineal(a,b,c);
+        System.out.println("Discriminante>> "+e1.getDiscriminante());
+          //verifica y muestra si las raices existen
+        if(e1.getDiscriminante()==0){
+            System.out.println("Raiz 1> "+e1.getRaiz1());
+        }else{
+            if(e1.getDiscriminante()>0){
+                System.out.println("Raiz 1> "+e1.getRaiz1()+"... Raiz 2> "+e1.getRaiz2());
+            }else{
+                System.out.println("La ecuacion no tiene raices reales!");
+}
+       
