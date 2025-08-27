@@ -8,10 +8,6 @@
 public class EcuacionLineal {
     // toma 6 valores para el sistema de ecuaciones 2x2
     private double a,b,c,d,e,f;
-    //Crea un constructor con argumentos 
-    public EcuacionLineal(double a,double b,double c,double d,double e,double f){
-        this.a=a;this.b=b;this.c=c;this.d=d;this.e=e;this.f=f;
-    }
     //verifica si el sistema tiene solucion
     public boolean tieneSolucion(){
         double r=0;
