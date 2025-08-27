@@ -8,10 +8,6 @@
 public class EcuacionLineal {
     //atributos
     private double a,b,c;
-    //constructor
-    public EcuacionLineal(double a,double b,double c){
-        this.a=a;this.b=b;this.c=c;
-    }
     //obtiene el discriminante
     public double getDiscriminante(){
         double dis=0;
