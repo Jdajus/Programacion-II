@@ -1,0 +1,274 @@
+      //PARTICIPACION 4, INSCISO  B
+
+    //...........JAVA
+//Clase MiEntero
+package com.mycompany.entero;
+
+public class MiEntero {
+    private int valor;
+    public MiEntero(){
+    }
+    public MiEntero(int v){
+        valor=v;
+    }
+    public int getInt(){
+        return valor;
+    }
+    //-----------------------------
+    public boolean esPar(){
+        if(valor%2==0){
+            return true;
+        }else{
+            return false;
+        }   
+    }
+    public boolean esImpar(){
+        if(valor%2!=0){
+            return true;
+        }else{
+            return false;
+        }   
+    }
+    public boolean esPrimo(){
+        if (valor <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(valor); i++) {
+            if (valor % i == 0) {
+                return false;
+            }
+        }
+        return true;  
+    }
+    //-----------------------------
+    public static void esPar(int v){
+        if(v%2==0){
+            System.out.println("verdadero");
+        }else{
+            System.out.println("falso");
+        } 
+    }
+    public static void esImpar(int v){
+        if(v%2!=0){
+            System.out.println("verdadero");
+        }else{
+            System.out.println("falso");
+        } 
+    }
+    public static void esPrimo(int v){
+        if (v <= 1) {
+            System.out.println("verdadero");
+        }
+        for (int i = 2; i <= Math.sqrt(v); i++) {
+            if (v % i == 0) {
+                System.out.println("falso");
+            }
+        }
+        System.out.println("falso");  
+    }
+    //-----------------------------
+    public static void esPar(MiEntero M){
+        if(M.esPar()){
+            System.out.println("verdadero");
+        }else{
+            System.out.println("falso");
+        } 
+    }
+    public static void esImpar(MiEntero M){
+        if(M.esImpar()){
+            System.out.println("verdadero");
+        }else{
+            System.out.println("falso");
+        } 
+    }
+    public static void esPrimo(MiEntero M) {
+    int v = M.getInt(); // Accedemos al valor del objeto
+    
+    if (v <= 1) {
+        System.out.println("falso");
+        return;
+    }
+    for (int i = 2; i <= Math.sqrt(v); i++) {
+        if (v % i == 0) {
+            System.out.println("falso");
+            return;
+        }
+    }
+    System.out.println("verdadero");
+    }
+    //-----------------------------
+    public int equals(int v){
+        valor=v;
+        return v;
+    }
+    public int equals(MiEntero s){
+        if(s.equals("MiEntero")){
+            return s.getInt();
+        }else{
+            return -1;
+        }
+    }
+    //-----------------------------
+    public static int parseInt(char[] c){
+        return Integer.parseInt(new String(c));
+    }
+    public static int parseInt(String s){
+        return Integer.parseInt(s);
+    }
+    
+}
+
+
+
+//PROGRAMA PRINCIPAL....
+
+package com.mycompany.entero;
+
+public class Entero {
+
+    public static void main(String[] args) {
+        MiEntero m1=new MiEntero(3);
+        System.out.println(m1.esPar());
+        System.out.println(m1.esImpar());
+        System.out.println(m1.esPrimo());
+        System.out.println("-------------------");
+        MiEntero m2=new MiEntero();
+        m1.esPar(6);
+        m1.esImpar(6);
+        m1.esPrimo(6);
+        System.out.println("-------------------");
+        MiEntero m3=new MiEntero(17);
+        m3.esPar(m3);
+        m3.esImpar(m3);
+        m3.esPrimo(m3);
+        System.out.println("-------------------");
+        System.out.println(m1.equals(3));
+        System.out.println(m1.equals(m3));
+        System.out.println("-------------------");
+        char[] numChars = {'9', '1', '3'};
+        String numStr = "13280354";
+        System.out.println( MiEntero.parseInt(numChars));
+        System.out.println( MiEntero.parseInt(numStr));
+    }
+}
+
+
+
+      //......PYTHON.....
+
+#   clase MiEntero
+import math
+
+class MiEntero:
+    def __init__(self, valor=0):
+        self.valor = valor
+
+
+    def get_int(self):
+        return self.valor
+
+    # -----------------------------
+
+    def es_par(self):
+        return self.valor % 2 == 0
+
+    def es_impar(self):
+        return self.valor % 2 != 0
+
+    def es_primo(self):
+        if self.valor <= 1:
+            return False
+        for i in range(2, int(math.sqrt(self.valor)) + 1):
+            if self.valor % i == 0:
+                return False
+        return True
+
+    # -----------------------------
+
+    @staticmethod
+    def es_par_int(v):
+        print("verdadero" if v % 2 == 0 else "falso")
+
+    @staticmethod
+    def es_impar_int(v):
+        print("verdadero" if v % 2 != 0 else "falso")
+
+    @staticmethod
+    def es_primo_int(v):
+        if v <= 1:
+            print("falso")
+            return
+        for i in range(2, int(math.sqrt(v)) + 1):
+            if v % i == 0:
+                print("falso")
+                return
+        print("verdadero")
+
+    # -----------------------------
+    # Métodos estáticos con objeto MiEntero
+    @staticmethod
+    def es_par_obj(M):
+        print("verdadero" if M.es_par() else "falso")
+
+    @staticmethod
+    def es_impar_obj(M):
+        print("verdadero" if M.es_impar() else "falso")
+
+    @staticmethod
+    def es_primo_obj(M):
+        v = M.get_int()
+        if v <= 1:
+            print("falso")
+            return
+        for i in range(2, int(math.sqrt(v)) + 1):
+            if v % i == 0:
+                print("falso")
+                return
+        print("verdadero")
+
+    # -----------------------------
+
+    def equals_int(self, v):
+        return self.valor == v
+
+    def equals_obj(self, otro):
+        return self.valor == otro.get_int()
+
+    # -----------------------------
+
+    @staticmethod
+    def parse_int_chars(c):
+        return int("".join(c))
+
+    @staticmethod
+    def parse_int_str(s):
+        return int(s)
+
+
+#programa principal:
+if __name__ == "__main__":
+    m1 = MiEntero(3)
+    print(m1.es_par())
+    print(m1.es_impar())
+    print(m1.es_primo())
+
+    print("-------------------")
+    m1.es_par_int(6)
+    m1.es_impar_int(6)
+    m1.es_primo_int(6)
+
+    print("-------------------")
+    m3 = MiEntero(17)
+    MiEntero.es_par_obj(m3)
+    MiEntero.es_impar_obj(m3)
+    MiEntero.es_primo_obj(m3)
+
+    print("-------------------")
+    print(m1.equals_int(3))
+    print(m1.equals_obj(m3))
+
+    print("-------------------")
+    num_chars = ['9', '1', '3']
+    num_str = "13280354"
+    print(MiEntero.parse_int_chars(num_chars))
+    print(MiEntero.parse_int_str(num_str))
