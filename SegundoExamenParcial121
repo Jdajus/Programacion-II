@@ -1,0 +1,83 @@
+    #PROGRAMA PRINCIPAL:
+package com.mycompany.exam2;
+//PROGAMA PRINCIPAL
+public class Exam2 {
+
+    public static void main(String[] args) {
+        
+    }
+}
+
+
+    #CLASE MiTeleferico:
+package com.mycompany.exam2;
+
+public class MiTeleferico {
+    private Linea L[]=new Linea[10];
+    private float cantidadIngresos;
+    public void agregarPersonFila(Persona P, String linea){
+        
+    }
+    public void agregarCabina(String linea){
+        
+    }
+}
+
+
+    #CLASE Linea
+package com.mycompany.exam2;
+
+public class Linea {
+    private String color;
+    private Persona P[]=new Persona[50];
+    private Cabina C[]=new Cabina[50];
+    private int cantidadCabinas; 
+
+    public Linea(String color) {
+        this.color = color;
+    }
+    public void agreagarPersona(Persona P){
+        
+    }
+    public void agregarCabina(int nroCab){
+        
+    }
+    
+}
+
+
+    #CLASE Cabina
+package com.mycompany.exam2;
+
+public class Cabina {
+    private int nroCabina;
+    private Persona P[]=new Persona[50];
+
+    public Cabina(int nroCabina) {
+        this.nroCabina = nroCabina;
+    }
+    public void agregarPersona(Persona P){
+        for(int i=0;i<=10;i++){
+            P{i]].agregar();
+        }  
+    }
+    private void agregar(Persona P) {
+    }
+
+}
+
+
+    #CLASE Persona
+package com.mycompany.exam2;
+
+public class Persona {
+    private String nombre;
+    private int edad;
+    private float pesoPersona;
+
+    public Persona(String nombre, int edad, float peso) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.pesoPersona = peso;
+    }    
+}
